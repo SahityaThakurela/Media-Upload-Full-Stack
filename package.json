@@ -1,0 +1,17 @@
+{
+  "name": "first_full_stack",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "Frontend",
+    "backend",
+    "fullstack"
+  ],
+  "license": "ISC",
+  "author": "Sahitya Thakurela",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

@@ -1,12 +1,11 @@
 // require('dotenv').config() //it's also fine & works but kill the vibe
-
 import dotenv from 'dotenv';
 import connectDB from "./db/index.js";
+import { app } from './app.js';
 
 dotenv.config({
-    path: "./env"
+    path: "./.env"      //this is how you give name ./.env
 })
-
 
 
 connectDB()

@@ -1,6 +1,6 @@
 import mongoose,{Schema} from "mongoose";
 import bcrypt from "bcrypt"
-import jwt, { sign } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 
 const userSchema = new Schema(
     {
@@ -54,7 +54,7 @@ const userSchema = new Schema(
 userSchema.pre("save", async function (next) {      //pre is hook like (post,listen),   //save is middleware
     if (!this.ismodified("password")) return next(); //only when the pas.. changes when only next() fnc runs
 
-    this.password = bcrypt.hash(this.password, 10)
+    this.password = await bcrypt.hash(this.password, 10)
     next()
 })
 
